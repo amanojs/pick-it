@@ -1,0 +1,33 @@
+{
+  "manifest_version": 2,
+  "name": "pick-it",
+  "author": "Kuwahata Takashi",
+  "description": "You can see you selected IT word explain.",
+  "version": "0.0.0.1",
+  "icons": {
+    "16": "images/icon-16.png",
+    "48": "images/icon-48.png",
+    "128": "images/icon-128.png"
+  },
+  "browser_action": {
+    "default_title": "pick-it",
+    "default_icon": "images/icon-19.png",
+    "default_popup": "popup.html"
+  },
+  "web_accessible_resources": [
+    "pit.js"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "contentscript.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "storage"
+  ]
+}
